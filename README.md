@@ -1,6 +1,8 @@
 # AppTour
 Show your apps key features in a cool way.
 
+### Note: UNDER HEAVY DEVELOPMENT 
+
 ### About
 
 ### Screenshots
