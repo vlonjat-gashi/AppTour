@@ -1,19 +1,124 @@
 # AppTour
 Show your apps key features in a cool way.
 
-### Note: UNDER HEAVY DEVELOPMENT 
-
 ### About
 
-### Screenshots
+Show to your users the purpose and the key functions of your app in a cool material way using the AppTour library.
+
+### Screenshot
+
+![img](http://i.imgur.com/fG2aNUn.gif)
 
 ### Features
 
+- Pre made slides.
+- Add your own custom slides.
+- Next, Skip and Done buttons.
+
 ### Usage
+
+Create a new **Activity** that extends from the **AppTour** and then in the **init** add the slides and configure the intro.
+
+**Important**: Don't override the **onCreate** method. Use **init**.
+
+```java
+public class MainActivity extends AppTour {
+
+    @Override
+    public void init(Bundle savedInstanceState) {
+
+        int firstColor = Color.parseColor("#0097A7");
+        int secondColor = Color.parseColor("#FFA000");
+        int customSlideColor = Color.parseColor("#009866");
+
+        //Create pre-created fragments
+        Fragment firstSlide = MaterialSlide.newInstance(R.drawable.cybr, "Presentations on the go",
+                "Get stuff done with or without an internet connection.", Color.WHITE, Color.WHITE);
+
+        Fragment secondSlide = MaterialSlide.newInstance(R.drawable.cybr, "Share and edit together",
+                "Write on your own or invite more people to contribute.", Color.WHITE, Color.WHITE);
+
+        //Add slides
+        addSlide(firstSlide, firstColor);
+        addSlide(secondSlide, secondColor);
+
+        //Custom slide
+        addSlide(new CustomSlide(), customSlideColor);
+
+        //Customize tour
+        setSkipButtonTextColor(Color.WHITE);
+        setNextButtonColorToWhite();
+        setDoneButtonTextColor(Color.WHITE);
+    }
+
+    @Override
+    public void onSkipPressed() {
+        //Do something after clicking Skip button.
+    }
+
+    @Override
+    public void onDonePressed() {
+        //Do something after clicking Done button.
+    }
+}
+```
 
 ### Get It
 
 ### Customization
+
+```java
+//Set String value of the Skip button
+setSkipText("Skip");
+
+//Set String value of the Done button
+setDoneText("Done");
+
+//Set the text color of the skip button
+setSkipButtonTextColor(Color.WHITE);
+
+//Set the next button color to white
+setNextButtonColorToWhite();
+
+//Set the next button color to black
+setNextButtonColorToBlack();
+
+//Set the text color of the done button
+setDoneButtonTextColor(Color.WHITE);
+
+//Set the color of the separator between slide content and bottom controls
+setSeparatorColor(Color.WHITE);
+
+//Set the color of the active dot indicator
+setActiveDotColor(Color.RED);
+
+//Set the color of the inactive dot indicator
+setInactiveDocsColor(Color.GRAY);
+
+//Show the skip button
+showSkip();
+
+//Hide the skip button
+hideSkip();
+
+//Show the next button
+showNext();
+
+//Hide the next button
+hideNext();
+
+//Show the done button
+showDone();
+
+//Hide the done button
+hideDone();
+
+//Show indicator dots
+showIndicatorDots();
+
+//Hide indicator dots
+hideIndicatorDots();
+```
 
 ### Example
 
