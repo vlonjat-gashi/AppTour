@@ -8,11 +8,11 @@ import android.support.v4.app.FragmentPagerAdapter;
 import java.util.List;
 
 /**
- * Created by star on 8/24/15.
+ * @author Vlonjat Gashi (vlonjatg)
  */
 public class PagerAdapter extends FragmentPagerAdapter {
 
-    private List<Fragment> fragments;
+    private final List<Fragment> fragments;
 
     public PagerAdapter(FragmentManager fm, @NonNull List<Fragment> fragments) {
         super(fm);

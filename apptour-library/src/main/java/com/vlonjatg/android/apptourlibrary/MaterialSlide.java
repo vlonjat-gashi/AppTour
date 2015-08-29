@@ -11,21 +11,19 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 /**
- * Created by star on 8/24/15.
+ * @author Vlonjat Gashi (vlonjatg)
  */
 public class MaterialSlide extends Fragment {
 
     private static final String ARG_DRAWABLE = "drawable";
     private static final String ARG_TITLE = "title";
     private static final String ARG_CONTENT = "content";
-    private static final String ARG_BACKGROUND_COLOR = "backgroundColor";
     private static final String ARG_TITLE_TEXT_COLOR = "titleTextColor";
     private static final String ARG_CONTENT_TEXT_COLOR = "contentTextColor";
 
     int drawable;
     String title;
     String content;
-    int backgroundColor;
     int titleTextColor;
     int contentTextColor;
 
@@ -37,8 +35,7 @@ public class MaterialSlide extends Fragment {
     public MaterialSlide() {
     }
 
-    public static MaterialSlide newInstance(int imageDrawable, String title, String content,
-                                            int backgroundColor, int titleTextColor, int contentTextColor) {
+    public static MaterialSlide newInstance(int imageDrawable, String title, String content, int titleTextColor, int contentTextColor) {
 
         MaterialSlide materialSlide = new MaterialSlide();
 
@@ -46,7 +43,6 @@ public class MaterialSlide extends Fragment {
         args.putInt(ARG_DRAWABLE, imageDrawable);
         args.putString(ARG_TITLE, title);
         args.putString(ARG_CONTENT, content);
-        args.putInt(ARG_BACKGROUND_COLOR, backgroundColor);
         args.putInt(ARG_TITLE_TEXT_COLOR, titleTextColor);
         args.putInt(ARG_CONTENT_TEXT_COLOR, contentTextColor);
         materialSlide.setArguments(args);
@@ -61,11 +57,8 @@ public class MaterialSlide extends Fragment {
             drawable = getArguments().getInt(ARG_DRAWABLE);
             title = getArguments().getString(ARG_TITLE);
             content = getArguments().getString(ARG_CONTENT);
-            backgroundColor = getArguments().getInt(ARG_BACKGROUND_COLOR);
             titleTextColor = getArguments().getInt(ARG_TITLE_TEXT_COLOR);
             contentTextColor = getArguments().getInt(ARG_CONTENT_TEXT_COLOR);
-
-            ((AppTour) getActivity()).addBackgroundColor(backgroundColor);
         }
     }
 
@@ -90,9 +83,6 @@ public class MaterialSlide extends Fragment {
         if (contentTextColor != 0) {
             slideContentTextView.setTextColor(contentTextColor);
         }
-
-
-        //slideRelativeLayout.setBackgroundColor(backgroundColor);
 
         return rootView;
     }

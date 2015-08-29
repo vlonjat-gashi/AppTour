@@ -5,4 +5,20 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="GooglePlusButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="colorButtonNormal">#dd4b39</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="FacebookButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="colorButtonNormal">#3b5998</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="TwitterButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="colorButtonNormal">#55acee</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+
 </resources>
