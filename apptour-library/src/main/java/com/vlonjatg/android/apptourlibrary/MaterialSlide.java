@@ -35,6 +35,15 @@ public class MaterialSlide extends Fragment {
     public MaterialSlide() {
     }
 
+    /**
+     * Create Material Slide
+     * @param imageDrawable Image resource for the slide
+     * @param title String value of the slide title
+     * @param content String value of the slide content
+     * @param titleTextColor Color value of the title text color
+     * @param contentTextColor Color value of the content text color
+     * @return Returned the created slide
+     */
     public static MaterialSlide newInstance(int imageDrawable, String title, String content, int titleTextColor, int contentTextColor) {
 
         MaterialSlide materialSlide = new MaterialSlide();

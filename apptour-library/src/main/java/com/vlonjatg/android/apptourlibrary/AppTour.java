@@ -31,6 +31,9 @@ import java.util.Vector;
  */
 public abstract class AppTour extends AppCompatActivity {
 
+    private final ArgbEvaluator argbEvaluator = new ArgbEvaluator();
+    private final ArrayList<Integer> colors = new ArrayList<>();
+    private final List<Fragment> fragments = new Vector<>();
     private ViewPager introViewPager;
     private RelativeLayout controlsRelativeLayout;
     private Button skipIntroButton;
@@ -39,19 +42,11 @@ public abstract class AppTour extends AppCompatActivity {
     private View separatorView;
     private LinearLayout dotsLayout;
     private TextView[] dots;
-
     private PagerAdapter pagerAdapter;
-
     private int currentPosition;
     private int activeDotColor;
     private int inactiveDocsColor;
     private int numberOfSlides;
-
-    private final ArgbEvaluator argbEvaluator = new ArgbEvaluator();
-    private final ArrayList<Integer> colors = new ArrayList<>();
-
-    private final List<Fragment> fragments = new Vector<>();
-
     private boolean isSkipForceHidden;
     private boolean isNextForceHidden;
     private boolean isDoneForceHidden;
@@ -122,6 +117,7 @@ public abstract class AppTour extends AppCompatActivity {
 
     /**
      * Add a slide to the intro
+     *
      * @param fragment Fragment of the slide to be added
      */
     public void addSlide(@NonNull Fragment fragment) {
@@ -132,8 +128,9 @@ public abstract class AppTour extends AppCompatActivity {
 
     /**
      * Add a slide to the intro
+     *
      * @param fragment Fragment of the slide to be added
-     * @param color Background color of the fragment
+     * @param color    Background color of the fragment
      */
     public void addSlide(@NonNull Fragment fragment, @ColorInt int color) {
         fragments.add(fragment);
@@ -142,7 +139,17 @@ public abstract class AppTour extends AppCompatActivity {
     }
 
     /**
+     * Return slides
+     *
+     * @return Return slides
+     */
+    public List<Fragment> getSlides() {
+        return pagerAdapter.getFragments();
+    }
+
+    /**
      * Get which slide is currently active
+     *
      * @return Returns the current active slide index
      */
     public int getCurrentSlide() {
@@ -151,6 +158,7 @@ public abstract class AppTour extends AppCompatActivity {
 
     /**
      * Set the currently selected slide
+     *
      * @param position Item index to select
      */
     public void setCurrentSlide(int position) {
@@ -159,6 +167,7 @@ public abstract class AppTour extends AppCompatActivity {
 
     /**
      * Set the string value of the skip button
+     *
      * @param text String value to set
      */
     public void setSkipText(@NonNull String text) {
@@ -167,6 +176,7 @@ public abstract class AppTour extends AppCompatActivity {
 
     /**
      * Set the string value of the done button
+     *
      * @param text String value to set
      */
     public void setDoneText(@NonNull String text) {
@@ -175,6 +185,7 @@ public abstract class AppTour extends AppCompatActivity {
 
     /**
      * Set the text color of the skip button
+     *
      * @param color Color value to set
      */
     public void setSkipButtonTextColor(@ColorInt int color) {
@@ -197,6 +208,7 @@ public abstract class AppTour extends AppCompatActivity {
 
     /**
      * Set the text color of the done button
+     *
      * @param color Color value to set
      */
     public void setDoneButtonTextColor(@ColorInt int color) {
@@ -205,6 +217,7 @@ public abstract class AppTour extends AppCompatActivity {
 
     /**
      * Set the color of the separator between slide content and bottom controls
+     *
      * @param color Color value to set
      */
     public void setSeparatorColor(@ColorInt int color) {
@@ -213,6 +226,7 @@ public abstract class AppTour extends AppCompatActivity {
 
     /**
      * Set the color of the active dot indicator
+     *
      * @param color Color value to set
      */
     public void setActiveDotColor(@ColorInt int color) {
@@ -221,6 +235,7 @@ public abstract class AppTour extends AppCompatActivity {
 
     /**
      * Set the color of the inactive dot indicator
+     *
      * @param color Color value to set
      */
     public void setInactiveDocsColor(@ColorInt int color) {
