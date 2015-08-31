@@ -140,6 +140,10 @@ An [example](https://github.com/vlonjatg/AppTour/tree/master/sample) is availabl
 
 Vlonjat Gashi - [Twitter](https://twitter.com/vlonjatg)
 
+### Attributes
+
+This library is inspired by [AppIntro](https://github.com/PaoloRotolo/AppIntro) library.
+
 ### License
 
 AppTour is available under the [MIT](http://opensource.org/licenses/MIT) licence.
