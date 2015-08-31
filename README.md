@@ -65,6 +65,18 @@ public class MainActivity extends AppTour {
 
 ### Get It
 
+```
+allprojects {
+        repositories {
+            jcenter()
+        }
+    }
+
+    dependencies {
+        compile 'com.vlonjatg.android:app-tour:1.0'
+    }
+```
+
 ### Customization
 
 ```java
