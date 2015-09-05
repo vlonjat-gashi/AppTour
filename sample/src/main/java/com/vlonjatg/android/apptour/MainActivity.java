@@ -8,6 +8,9 @@ import android.widget.Toast;
 import com.vlonjatg.android.apptourlibrary.AppTour;
 import com.vlonjatg.android.apptourlibrary.MaterialSlide;
 
+/**
+ * @author Vlonjat Gashi (vlonjatg)
+ */
 public class MainActivity extends AppTour {
 
     @Override

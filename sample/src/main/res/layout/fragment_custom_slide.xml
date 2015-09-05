@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <Button
+        android:id="@+id/googlePlusButton"
+        android:layout_width="fill_parent"
+        android:layout_height="56dp"
+        android:layout_above="@+id/facebookButton"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/googlePlus"
+        android:theme="@style/GooglePlusButtonStyle" />
+
+    <Button
+        android:id="@+id/facebookButton"
+        android:layout_width="fill_parent"
+        android:layout_height="56dp"
+        android:layout_above="@+id/twitterButton"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/facebook"
+        android:theme="@style/FacebookButtonStyle" />
+
+    <Button
+        android:id="@+id/twitterButton"
+        android:layout_width="fill_parent"
+        android:layout_height="56dp"
+        android:layout_above="@+id/introContent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/twitter"
+        android:theme="@style/TwitterButtonStyle" />
+
+    <TextView
+        android:id="@+id/introContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="28dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:lineSpacingExtra="2.5dp"
+        android:text="@string/customFragment"
+        android:textSize="14sp"
+        android:textColor="#FFF"/>
+
+</RelativeLayout>
