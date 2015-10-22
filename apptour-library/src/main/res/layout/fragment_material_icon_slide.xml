@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/slideRelativeLayout">
+
+    <com.malinskiy.materialicons.widget.IconTextView
+        android:id="@+id/iconTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="@android:color/white"
+        android:textSize="92sp"
+        android:shadowColor="#22000000"
+        android:shadowDx="1"
+        android:shadowDy="5"
+        android:shadowRadius="1"/>
+
+    <TextView
+        android:id="@+id/slideTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/slideContentTextView"
+        android:layout_alignLeft="@+id/slideContentTextView"
+        android:layout_marginRight="36dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:text="@string/appTourSlideTitlePlaceholder" />
+
+    <TextView
+        android:id="@+id/slideContentTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginRight="36dp"
+        android:lineSpacingExtra="5.5dp"
+        android:maxLines="4"
+        android:ellipsize="end"
+        android:text="@string/appTourSlideContentPlaceholder"/>
+
+</RelativeLayout>
